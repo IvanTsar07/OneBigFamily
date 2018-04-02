@@ -1,0 +1,108 @@
+$black : #000000;
+$white: #ffffff;
+$greyLightBlue: #7c8994;
+
+
+
+$lightGrey: #e6e6e6;
+$darkGrey: #333;
+$red: #ff1755;
+
+
+
+/* custom color */
+
+$yellow: #ffae00;
+$orange: #fc7100;
+$blue: #0c8fcc;
+$fiolet: #6d0fae;
+$darkBlue: #33227a;
+$pink: #e51c5e;
+$purple: #ae0f8d;
+
+$blueText: #02baab;
+
+
+/* fonts */
+
+$lato: 'Lato', sans-serif;
+$oxygen: 'Oxygen', sans-serif;
+
+
+
+// ICONS 
+
+$socIcons: #3b5998 #00a0d1 #c4302b #825c48 #a30834;
+
+
+@mixin translateY($e) {
+	-webkit-transform: translateY($e);
+		-moz-transform: translateY($e);
+			transform: translateY($e);
+}
+
+@mixin translateX($e) {
+	-webkit-transform: translateX($e);
+		-moz-transform: translateX($e);
+			transform: translateX($e);
+}
+
+@mixin translate($x, $y) {
+	-webkit-transform: translate($x, $y);
+		-moz-transform: translate($x, $y);
+			transform: translate($x, $y);
+}
+
+@mixin transition($e) {
+	-webkit-transition: $e;
+		-moz-transition: $e;
+			transition: $e;
+}
+
+%item-h2-base {
+	position: relative;
+	font-family: $oxygen;
+	color: $greyLightBlue;
+	font-size: 36px;
+	text-align: center;
+	margin-top: 100px;
+
+	&:after {
+		content: '';
+		display: block;
+		width: 50px;
+		height: 5px;
+		background-color: #eeeeee;
+		position: absolute;
+			bottom: -25px; left: 50%;
+		@include translateX(-50%);
+	}
+}
+
+
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 18px;
+	color: $black;
+	font-weight: 400;
+	font-style: normal;
+}
+
+a {
+	@include transition(.4s ease-in-out); 
+	cursor: pointer;
+	text-decoration: none;
+
+	&:hover,
+	&:focus,
+	&:active {
+		text-decoration: none;
+	}
+}
+
+
+
+
+
+

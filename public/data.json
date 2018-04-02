@@ -1,0 +1,50 @@
+[
+    {
+        "id": 0,
+        "name": "Lorem ipsum dolor sit amet",
+        "shortDesription": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores nulla minima rerum veniam voluptas est dolor corporis. Odio, dolor, eum!",
+        "link": "/post0",
+        "views": 250,
+        "last": false,
+        "image": "",
+        "category" : "1",
+        "band" : ""
+    },
+
+    {
+        "id": 1,
+        "name": "HONORED WITH THE POLAR MUSIC PRIZE",
+        "shortDesription": "We are thrilled to announce that on June 14th we will receive one of the most unique and distinctive honors in music, Sweden's Polar Music Prize",
+        "link": "/post1",
+        "views": 100,
+        "last": true,
+        "image": "./img/new1.jpg",
+        "category" : "2",
+        "band" : "Metallica"
+    },
+
+    {
+        "id": 2,
+        "name": "Sabroso Festival 2018",
+        "shortDesription": "We're going on the road with Sabroso Festival this year with Pennywise, with stops in Dana Point, Sacramento, Denver, Albuquerque, Tucson, Auburn and Portland!",
+        "link": "/post2",
+        "views": 450,
+        "last": true,
+        "image": "./img/new2.jpg",
+        "category" : "3",
+        "band" : "Offspring"
+    },
+
+    {
+        "id": 3,
+        "name": "REVOLVER MAGAZINE NAMES THE LAST HERO ONE OF THE TOP 20 ALBUMS OF 2016",
+        "shortDesription": "With 2016 coming to an end, Revolver has compiled a list of the 20 best albums that came out this year and Alter Bridge's The Last Hero made the cut!",
+        "link": "/post3",
+        "views": 300,
+        "last": true,
+        "image": "./img/new3.jpg",
+        "category" : "4",
+        "band" : "Alter Bridge"
+    }
+
+]

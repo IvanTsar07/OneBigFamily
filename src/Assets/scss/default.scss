@@ -1,0 +1,1302 @@
+@import "_config.scss";
+
+header {
+	position: fixed;
+		top:0px;left:0px;
+	display: block;
+	width: 100%;
+	color: $white;
+	font-size: 12px;
+	z-index: 9999;
+	// height: 90px;
+
+	.top-header {
+		background-color: $black;
+		padding-top: 8px;
+		padding-bottom: 10px;
+
+		.search-console {
+			float: left;
+			position: relative;
+
+			input {
+				width: 210px;
+				padding-left: 10px;
+				padding-top: 7px;
+				padding-bottom: 7px;
+				border: 1px solid $greyLightBlue;
+				background: $black;
+				color: $greyLightBlue;
+				font-family: $lato;
+				font-size: 12px;
+				font-weight: normal;
+				outline: none;
+				@include transition(0.4s);
+
+				&:focus {
+					color: $white;
+					border-color: $white;
+
+					.fa {
+						color: $white;
+					}
+				}
+			}
+
+			.fa {
+			    font-size: 14px;
+				color: $greyLightBlue;
+				position: absolute;
+					right: 10px; top: 50%;
+				@include translateY(-50%);
+				@include transition(0.4s);
+			}
+		}
+
+		.log-buttons {
+			float: right;
+			margin-top: 8px;
+
+			a {
+				margin: 0px 10px;
+				color: $greyLightBlue;
+				text-decoration: none;
+				@include transition(0.4s);
+
+				&:hover {
+					color: $white;
+				}
+			}
+		}
+	}
+
+
+	.bottom-header {
+		clear: both;
+		width: 100%;
+		height: 72px;
+		background: rgba(0,0,0,.5);
+		text-align: center;
+		padding-top: 10px;
+
+		.container {
+			position: relative;
+		}
+
+		.logo {
+			position: absolute;
+				top: -10px; left: 30px;
+		}
+
+
+		nav {
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+		}	
+
+		nav {
+			margin-left: 80px;
+
+			ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					display: inline-block;
+					width: 100px;
+					height: 62px;
+					position: relative;
+					@include transition(0.4s);
+
+					&:after {
+						content: '';
+						display: block;
+						width: 100px;
+						height: 10px;
+						position: absolute;
+							top: -10px;
+						
+					}
+
+					a {
+						text-transform: uppercase;
+						color: $white;
+						text-decoration: none;
+						position: absolute;
+							top: 50%; left: 50%;
+						@include translate(-50%, -50%);
+					}
+				}
+
+				@for $i from 1 through 7 {
+					li:nth-child(#{$i}) {
+						@if $i == 1 {
+							&:after {
+								background: #ffae00;
+							}
+
+							&:hover {
+								background: #ffae00;
+							}
+						}
+						@else if $i == 2 {
+							&:after {
+								background: #fc7100;
+							}
+		
+							&:hover {
+								background: #fc7100;
+		
+							}
+						}
+						@else if $i == 3 {
+							&:after {
+								background: #e51c5e;
+							}
+		
+							&:hover {
+								background: #e51c5e;
+		
+							}
+						}
+						@else if $i == 4 {
+							&:after {
+								background: #ae0f8d;
+							}
+		
+							&:hover {
+								background: #ae0f8d;
+		
+							}
+						}
+
+						@else if $i == 5 {
+							&:after {
+								background: #6d0fae;
+							}
+		
+							&:hover {
+								background: #6d0fae;
+		
+							}
+						}
+
+						@else if $i == 6 {
+							&:after {
+								background: #33227a;
+							}
+		
+							&:hover {
+								background: #33227a;
+		
+							}
+						}
+
+						@else if $i == 7 {
+							&:after {
+								background: #0c8fcc;
+							}
+		
+							&:hover {
+								background: #0c8fcc;
+		
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+#homeslider {
+	margin-top: -72px;
+	position: relative;	
+
+	.item {
+		position: relative;
+		height: 800px;
+
+		img {
+			width: 100%;
+		}
+
+		.slideName {
+			font-size: 60px;
+			font-family: $oxygen;
+			color: $white;
+			text-align: center;
+			margin: 0;
+			position: absolute;
+				top: 50%; left: 50%;
+			@include translate(-50%, -50%);
+			
+			p {
+				margin: 0;
+
+				span {
+					color: $blueText;
+				}
+			}
+		}
+	}
+
+	.owl-dots {
+		width: 100%;
+		margin: 0;
+		position: absolute;
+			bottom: 50px;
+
+		.owl-dot span {
+			width: 20px;
+			height: 3px;
+			border-radius: 1px;
+			background: $white;
+		}
+
+		.owl-dot.active span {
+			background: $blueText;
+		}
+	}
+}
+
+
+.topNewOfMonthSection {
+	width: 100%;
+	position: relative;
+	text-align: center;
+	padding-bottom: 100px;
+
+	h2 {
+		@extend %item-h2-base;
+		margin-bottom: 80px;
+	}
+
+	h2 + p {
+		font-size: 18px;
+		color: $greyLightBlue;
+		font-family: $oxygen;
+		text-align: center;
+		margin-bottom: 40px;
+	}
+
+	a {
+		font-size: 12px;
+		display: inline-block;
+		padding: 12px 15px;
+		border: 3px solid $blueText;
+		color: $blueText;
+		text-transform: uppercase;
+		font-family: $oxygen;
+		font-weight: bold;
+		@include transition(0.4s);
+
+		&:hover {
+			background-color: $blueText;
+			color: $white;
+		}
+	}
+}
+
+.popularPostsSection {
+	width: 100%;
+	height: 750px;
+	background-image: url('../img/MUSIC-EDU-bass.jpg');
+	text-align: center;
+
+	h2 {
+		@extend %item-h2-base;
+		color: $white;
+		margin-bottom: 80px;
+
+		&::after {
+			background-color: $white;
+		}
+	}
+
+	h2 + p {
+		display: inline-block;
+		width: 70%;
+		color: $white;
+		font-size: 18px;
+		margin: 0;
+		margin-bottom: 40px;
+		font-family: $oxygen;
+		text-align: center;
+	}
+
+	.popularPostWrapper {
+		display: flex;
+		justify-content: center;
+
+		.popularPost {
+			width: 290px;
+			height: 290px;
+			background-color: #cccccc;
+			margin: 0px 15px;
+			position: relative;
+
+			.bottomDescr {
+				width: 100%;
+				height: 70px;
+				padding: 15px;
+				font-size: 0;
+				background: rgba(0,0,0,.75);
+				position: absolute;
+					bottom: 0px; left: 0px;
+				@include transition(0.5s);
+				overflow: hidden;
+
+				div {
+					// display: flex;
+					// justify-content: space-between;
+					// margin: 0px;
+					display: inline-block;
+
+					p {
+						margin: 0;
+					}
+
+					.fa {
+						color: $white;
+					}
+				}
+
+				div:first-child {
+					width: 90%;
+					text-align: left;
+
+					p:first-child {
+						color: $white;
+						font-size: 14px;
+					}
+					
+					p:last-child {
+						color: #0aa99c;
+						font-size: 12px;
+					}
+				}
+
+				div:last-child {
+					width: 10%;
+					font-size: 12px;
+					text-align: center;
+					
+					p:first-child {
+						color: $white;
+					}
+					
+					p:last-child {
+						color: #0aa99c;
+					}
+				}
+			}
+
+			.hoverIcons {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				width: 100%;
+				height: 0%;
+				background: rgba(0,0,0,.5);
+				position: absolute;
+					top: 0; left: 0;
+				@include transition(0.5s);
+				overflow: hidden;
+
+				div {
+					width: 40px;
+					height: 40px;
+					background-color: $blueText;
+					position: relative;
+					border-radius: 50%;
+					margin: 0 auto;
+					margin-bottom: 10px;
+
+
+					&:hover,
+					&:focus {
+						cursor: pointer;
+						outline: none;
+					}
+
+					.fa {
+						color: white;
+						position: absolute;
+							top: 50%; left: 50%;
+						@include translate(-50%, -50%);
+					}
+				}
+			}
+		}
+
+		.popularPost:hover .hoverIcons {
+			height: 100%;
+		}
+
+		.popularPost:hover .bottomDescr {
+			height: 0;
+			padding: 0px;
+			overflow: hidden;
+		}
+	}
+}
+
+
+
+.LatestsBlogPosts {
+	h2 {
+		@extend %item-h2-base;
+	}
+
+	.lastPostWrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		margin-top: 80px;
+
+		.lastPost {
+			width: 290px;
+			border-bottom: 1px solid #c3c3c3;
+			display: flex;
+			position: relative;
+			min-height: 450px;
+			
+			.postImage {
+				height: 220px;
+				margin-bottom: 25px;
+				background-position: center center;
+				background-size: cover;
+				background-repeat: no-repeat;
+			}
+
+			.postName a {
+				font-size: 20px;
+				font-family: $oxygen;
+				color: $blueText;
+				text-transform: uppercase;
+				text-decoration: none;
+				@include transition(0.3s);
+			}
+
+			.postShort {
+				font-size: 14px;
+				font-family: $oxygen;
+				color: #555555;
+				margin-bottom: 20px;
+			}
+
+			.bottom {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				align-self: flex-end;
+				position: absolute;
+    				bottom: 0px;
+    			width: 100%;
+
+				.postLink a {
+					font-size: 14px;
+					font-family: $oxygen;
+					color: $blueText;
+					@include transition(0.3s);
+					text-decoration: none;
+				}
+
+				.postViews {
+					color: #3b4954;
+					font-size: 14px;
+					font-family: $oxygen;
+
+					.fa {
+						color: $blueText;
+						font-size: 18px;
+						margin-right: 5px;
+						@include transition(0.3s);
+					}
+				}
+			}
+
+			&:hover {
+				.postName a,
+				.postLink a,
+				.postViews .fa {
+					color: $fiolet;
+				}
+				
+			}
+		}
+	}
+}
+
+
+.superbFeatureSection {
+	padding-bottom: 90px;
+
+	h2 {
+		@extend %item-h2-base;
+	}
+
+	.featuresWrapper {
+		width: 100%;
+		font-size: 0;
+		margin-top: 65px;
+		text-align: center;
+
+		.feature {
+			display: inline-block;
+			width: 450px;
+			margin: 0px 15px;
+			margin-bottom: 60px;
+
+			div {
+				display: inline-block;
+				vertical-align: top;
+				max-width: 83%;
+			}
+
+			.featureIcon {
+				font-size: 36px;
+				margin-right: 35px;
+				text-align: left;
+
+				.fa {
+					vertical-align: top;
+					color: $blueText;
+				}
+			}
+
+			.featureText {
+				h3 {
+					margin: 0;
+					margin-bottom: 15px;
+					color: $black;
+					font-size: 24px;
+					font-family: $oxygen;
+					text-align: left;
+				}
+
+				p {
+					font-size: 14px;
+					color: $greyLightBlue;
+					font-family: $oxygen;
+					text-align: left;
+				}
+			}
+
+		}
+	}
+}
+
+
+.quotesSliderSection {
+	width: 100%;
+	background-image: url('../img/jmi-how-to-apply-banner.jpg');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	#quotesslider {
+
+		.item {
+			height: 450px;
+			position: relative;
+			text-align: center;
+			color: $white;
+			font-family: $oxygen;
+			
+			&:after {
+				content: '';
+				display: block;
+				width: 44px;
+				height: 36px;
+				background-image: url('../img/quotes.png');
+				background-position: center center;
+				background-size: contain;
+				background-repeat: no-repeat;
+				position: absolute;
+					top: 90px;
+					left: 50%;
+				@include translateX(-50%); 
+			}
+
+			.quote {
+				position: absolute;
+					top: 50%; left: 50%;
+				@include translate(-50%, -50%);
+				font-size: 24px;
+
+				.musicianName {
+					display: inline-block;
+					font-family: $lato;
+					font-weight: bold;
+					font-size: 14px;
+					color: $blueText;
+					text-transform: uppercase;
+					position: relative;
+				
+					&:before {
+						content: '';
+						display: block;
+						width: 20px;
+						height: 2px;
+						background: $blueText;
+						position: absolute;
+							top: 50%; left: -35px;
+						@include translateY(-50%);
+						
+					}
+				}
+			}
+		}
+
+		.owl-dots {
+			width: 100%;
+			position: absolute;
+				left: 0px; bottom: 50px;
+
+			.owl-dot span {
+				background: $white;
+			}
+
+			.owl-dot.active span {
+				background: $blueText;
+			}
+			
+		}
+		
+	}
+}
+
+.companyExperienceSection {
+	margin-top: 100px;
+	padding-bottom: 95px;
+	background-color: $blueText;
+
+	h2 {
+		@extend %item-h2-base;
+		color: $white;
+
+		&:after {
+			background-color: $white;
+		}
+	}
+
+	.circleWrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: 70px;
+
+		.graph {
+			text-align: center;
+			
+			p {
+				margin: 0;
+				color: $white;
+				font-family: $oxygen;
+			}
+
+			.number {
+				font-size: 48px;
+			}
+
+			.name {
+				font-size: 18px;
+			}
+
+			.circle {
+				display: block;
+				margin: 0px 75px;
+				position: relative;
+			
+				svg {
+					width: 240px;
+					height: 240px;
+				
+					circle {
+						fill: rgba(0,0,0,0);
+						stroke: #35c8bc;
+						stroke-width: 5;
+						stroke-dasharray: 659px 659px;
+					}
+				
+					circle:nth-child(2n) {
+						fill: rgba(0,0,0,0);
+						stroke: #eee;
+						stroke-width: 5;
+					}
+				}
+				
+				.innerIcon {
+					width: 100px;
+					height: 100px;
+					border-radius: 50%;
+					background-color: $black;
+					background-position: center center;
+					background-repeat: no-repeat;
+					position: absolute;
+						top: 50%; left: 50%;
+					@include translate(-50%, -50%);
+				}
+			}
+		}
+
+		.graph:nth-child(1) .circle .innerIcon {
+			background-image: url('../img/innerIcon1.png');
+		}
+
+		.graph:nth-child(2) .circle .innerIcon {
+			background-image: url('../img/innerIcon2.png');
+		}
+
+		.graph:nth-child(3) .circle .innerIcon {
+			background-image: url('../img/innerIcon3.png');
+		}
+	}
+}
+
+
+.ourTeamComponent {
+	margin-bottom: 130px;
+	
+	h2 {
+		@extend %item-h2-base;
+		margin-bottom: 80px;
+	}
+
+	.profileWrapper {
+		display: flex;
+		justify-content: center;
+
+		.shortProfile {
+			width: 210px;
+			height: 380px;
+			background-color: $white;
+			border: 1px solid #eeeeee;
+			margin: 0px 30px;
+			text-align: center;
+
+			.profilePhoto {
+				width: 100%;
+				height: 280px;
+				background-color: #cccccc;
+				position: relative;
+
+				.profileDescription {
+					position: absolute;
+						bottom: 0px; left: 0px;
+					width: 100%;
+					height: 125px;
+					background-color: $white;
+					@include transition(0.5s);
+
+					.profileName {
+						width: 140px;
+						height: 62px;
+						background-color: $white;
+						border: 1px solid #eeeeee;
+						padding-top: 12px;
+						position: absolute;
+							top: 0px;
+							left: 50%;
+						@include translate(-50%, -50%);
+						@include transition(0.5s);
+
+						.peopleName {
+							font-size: 14px;
+							font-family: $oxygen;
+							color: $blueText;
+							text-align: center;
+							margin: 0;
+						}
+
+						.peoplePosition {
+							font-size: 12px;
+							font-family: $oxygen;
+							color: #c4c4c4;
+							text-align: center;
+							margin: 0;
+
+						}
+					}
+
+					.shortDesription {
+						color: $greyLightBlue;
+						text-align: center;
+						font-family: $oxygen;
+						font-size: 12px;
+						margin: 0px;
+						margin-top: 60px;
+					}
+				}
+			}
+
+			.profileLink {
+				display: inline-block;
+				width: 136px;
+				padding: 12px 0px;
+				margin-top: 30px;
+				border: 2px solid $blueText;
+				color: $blueText;
+				background-color: $white;
+				text-align: center;
+				text-transform: uppercase;
+				font-family: $oxygen;
+				font-weight: bold;
+				font-size: 12px;
+				@include transition(0.5s);
+
+				&:hover {
+					color: $white;
+					background-color: $blueText;
+				}
+			}
+		}
+	}
+}
+
+
+footer {
+	// margin-top: 50px;
+	text-align: center;
+	background-color: #1f2a32;
+
+	.container {
+		display: flex;
+		justify-content: center;
+
+
+
+		div.footerContacts,
+		div.footerLastPosts,
+		div.footerSocNet,
+		div.footerPopularPosts {
+			width: 225px;
+			padding-top: 70px;
+			position: relative;
+			padding-left: 12px;
+					
+			&:after {
+				content: '';
+				position: absolute;
+					top: 0px;
+					left: 0px;
+				display: block;
+				width: 100%;
+				height: 15px;
+				
+			}
+
+			.pointName {
+				font-size: 22px;
+				color: $white;
+				font-family: $oxygen;
+				text-align: left;
+				margin-bottom: 45px;
+			}
+		}
+
+		@for $i from 1 through 4 {
+			div:nth-child(#{$i}):after {
+				@if $i == 1 {
+					background: $fiolet;
+				}
+				@else if $i == 2 {
+					background: $blue;
+				}
+				@else if $i == 3 {
+					background: $pink;
+				}
+				@else if $i == 4 {
+					background: $yellow;
+				}
+			}
+		}
+
+		div.footerContacts {
+			padding-left: 0px;
+
+			.contactsItem {
+				margin-bottom: 25px;
+				color: #85939f;
+				font-size: 12px;
+				font-family: $oxygen;
+				text-align: left;
+
+				.fa {
+					color: $blueText;
+				}
+
+				span {
+					color: $white; 
+					margin-left: 10px;
+				}
+			}
+
+			iframe {
+				width: 100%;
+				height: 150px;
+				border: none;
+			}
+		}
+
+		.socIcon {
+			position: relative;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			margin-bottom: 20px;
+
+			.icon {
+				width: 50px;
+				height: 50px;
+				position: relative;
+
+				.fa {
+					position: absolute;
+						top: 50%; left: 50%;
+					@include translate(-50%, -50%);
+					color: $white;
+				}
+			}
+
+			p {
+				color: $white;
+				font-family: $oxygen;
+				font-weight: normal;
+				font-size: 12px;
+				margin: 0;
+				margin-left: 15px;
+			}
+		}
+
+		
+
+		@each $color in $socIcons {
+			$i: index($socIcons, $color) + 1;
+			
+			.socIcon:nth-child(#{$i}) .icon {
+				background: $color;
+			}
+		}
+	}
+}
+
+.videosPage {
+
+	.videosBanner {
+		width: 100%;
+		height: 500px;
+		margin-bottom: 55px;
+		background-image: url('../img/concert-video.jpg');
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		position: relative;
+
+
+		.pageName {
+			position: absolute;
+				bottom: 100px; left: 30%;
+			@include translateX(-20%);
+			color: #333333;
+			font-size: 56px;
+			font-family: $oxygen;
+		}
+	}
+
+	.videosGrid {
+		position: relative;
+		display: flex;
+		justify-content: space-around;
+
+		.videoBlock {
+			max-width: 290px;
+			border: 1px solid #eeeeee;
+			margin-bottom: 30px;
+			display: flex;
+    		flex-wrap: wrap;
+
+			iframe {
+				width: 100%;
+				height: 200px;
+				border: 0px;
+			}
+
+			.songInfo {
+				padding: 25px 15px;
+				min-height: 150px;
+
+				.songName {
+					font-size: 18px;
+					font-family: $oxygen;
+					color: $blueText;
+				}
+
+				.songShortDescription {
+					color: #555555;
+					font-size: 14px;
+					font-family: $oxygen;
+				}
+			}
+
+			.addInfo {
+				display: flex;
+				width: 100%;
+				justify-content: space-around;
+				margin-top: 25px;
+				border-top: 1px solid #eeeeee;
+				padding-top: 10px;
+
+				p {
+					font-size: 11px;
+					color: #555555;
+
+					span {
+						vertical-align: middle;
+					}
+
+					.fa {
+						font-size: 18px;
+						vertical-align: middle;
+						margin-right: 10px;
+						color: #a9a9a9;
+						@include transition(0.4s);
+
+						&:hover {
+							cursor: pointer;
+							color: #e41546; 
+						}
+					}
+
+					.fa.liked {
+						color: #e41546;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.blogPageComponent {
+
+	.blogBanner {
+		width: 100%;
+		height: 450px;
+		background-image: url('../img/blog-header.jpg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+		.container {
+			position: relative;
+			height: 100%;
+
+			h1 {
+				position: absolute;
+					bottom: 100px; left: 15%;
+				color: $white;
+				font-size: 56px;
+				font-family: $oxygen;
+			}
+		}
+	}
+
+	.filterBlock {
+		ul {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+
+			li {
+				display: inline-block;
+				margin-right: 20px;
+
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.blogPageGrid {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+
+		.postBlog {
+			width: 300px;
+			margin-bottom: 20px;
+
+			.blogImg {
+				width: 100%;
+				height: 200px;
+				background-position: center center;
+				background-repeat: no-repeat;
+				background-size: cover;
+			}
+		}
+	}
+}
+
+.galleryPage {
+	.galleryBanner {
+		width: 100%;
+		height: 450px;
+		background-image: url('../img/gellery-header.jpg');
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		
+		.container {
+			position: relative;
+			height: 100%;
+
+			h1 {
+				position: absolute;
+					bottom: 10px; left: 15%;
+				color: $darkBlue;
+				font-size: 56px;
+				font-family: $oxygen;
+			}
+		}
+	}
+
+	.albumsWrapper {
+		margin-top: 30px;
+
+		.container {
+			text-align: center;
+			font-size: 0px;
+
+			.albumBlock {
+				display: inline-block;
+				width: 45%;
+				min-height: 200px;
+				font-size: 18px;
+				margin: 0px 25px;
+				margin-bottom: 50px;
+				border: 1px solid $lightGrey;
+				position: relative;
+
+				img {
+					max-width: 100%;
+				}
+
+				.albumInfo {
+					position: absolute;
+						left: 20px; 
+						bottom: 10px;
+					text-align: left;
+
+					.albumName {
+						font-size: 26px;
+						font-family: $oxygen;
+						color: $white;
+						text-transform: uppercase;
+						margin: 0;
+					}
+	
+					.photosCount {
+						font-size: 18px;
+						font-family: $oxygen;
+						color: $white;
+						margin: 0;
+						font-style: italic;
+					}
+				}
+
+
+				.albumCategory {
+					font-size: 20px;
+					font-family: $oxygen;
+					color: $white;
+					background: $blue;
+					padding: 8px 15px;
+					position: absolute;
+						top: 0px;
+						left: 0px;
+					text-transform: capitalize;
+				}
+			}
+		}
+	}
+}
+
+
+.albumPage {
+	padding-bottom: 50px;
+
+	.titleImage {
+		width: 100%;
+		height: 450px;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-top: 50px;
+		margin-bottom: 50px;
+
+		.container {
+			position: relative;
+			height: 100%;
+			
+			.albumName {
+				position: absolute;
+					left: 0px;
+					bottom: 50px;
+				font-size: 30px;
+				font-family: $oxygen;
+				color: $white;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+	.photoWrapper {
+		.container {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			align-items: center;
+	
+			.react-fancybox .box {
+				z-index: 9999;
+			}
+
+			.thumbnail {
+				border: none;
+				cursor: pointer;
+
+				img {
+					//max-width: 300px;
+					margin: 20px;
+					border-radius: 20px;
+				}
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+.notactive {
+	display: none;
+}
+
+.opac {
+	opacity: 0;
+}
+
+.height0 {
+	height: 0 !important;
+	overflow: hidden;
+}

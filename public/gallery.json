@@ -1,0 +1,49 @@
+[
+    {
+        "id": 0,
+        "name": "VIENNA, AUSTRIA - MARCH 31, 2018",
+        "shortDescription": "",
+        "titleImage": "../img/albums/Metallica/Vienna31.03.2018/viewImg.jpg",
+        "images": [
+            "../img/albums/Metallica/Vienna31.03.2018/1.jpg",
+            "../img/albums/Metallica/Vienna31.03.2018/2.jpg",
+            "../img/albums/Metallica/Vienna31.03.2018/3.jpg",
+            "../img/albums/Metallica/Vienna31.03.2018/4.jpg",
+            "../img/albums/Metallica/Vienna31.03.2018/5.jpg",
+            "../img/albums/Metallica/Vienna31.03.2018/6.jpg"
+        ],
+        "countImages": 6,
+        "url": "/gallery/metallica",
+        "category": "metallica"
+    },
+
+    {
+        "id": 1,
+        "name": "Zyrakow, Poland - August 31, 2017",
+        "shortDescription": "",
+        "titleImage": "../img/albums/Offspring/CzadFestival/viewImg.jpg",
+        "images": [
+            "../img/albums/Offspring/CzadFestival/1.jpg",
+            "../img/albums/Offspring/CzadFestival/2.jpg",
+            "../img/albums/Offspring/CzadFestival/3.jpg",
+            "../img/albums/Offspring/CzadFestival/4.jpg",
+            "../img/albums/Offspring/CzadFestival/5.jpg",
+            "../img/albums/Offspring/CzadFestival/6.jpg",
+            "../img/albums/Offspring/CzadFestival/7.jpg"
+        ],
+        "countImages": 7,
+        "url": "/gallery/offspring",
+        "category": "offspring"
+    },
+
+    {
+        "id": 2,
+        "name": "VIENNA, AUSTRIA - MARCH 31, 2018",
+        "shortDescription": "",
+        "titleImage": "./img/albums/Metallica/Vienna31.03.2018/viewImg.jpeg",
+        "images": "./img/albums/Metallica/Vienna31.03.2018",
+        "url": "/gallery/alter_bridge",
+        "category": "metallica"
+    }
+
+]
